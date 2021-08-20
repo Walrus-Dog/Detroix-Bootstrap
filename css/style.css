@@ -1,0 +1,270 @@
+/* font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+/* colors: 
+    top-nav-heder: #1312c9 
+    link-text: #596573
+    background: #f4f4f6
+    active-button: #ff8900
+    more-buttons: #213349
+    footer-gradient: 33597e, #0e1620
+    footer-date: #bc813f, #ba6045, #bb435c
+    */
+
+/* break points
+    small = 576
+    med = 768
+    large = 992
+*/
+
+:root {
+    --prim: #131c29;
+    --sec: #ff8900;
+    --text: #596573;
+    --bgColor: #f4f4f6;
+    --buttonColor: #213349;
+    --headerFont: 'Oswald', sans-serif;
+    --textFont: 'Open Sans Condensed', sans-serif;
+}
+
+/* start generic */
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    color: var(--sec);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.button:hover {
+    color: #131c29;
+    background-color: var(--sec);
+}
+
+/* end generic */
+
+/* start header */
+
+.top-header {
+    background-color: var(--prim);
+}
+
+.main-header {
+    background-color: var(--bgColor);
+}
+
+.top-header-link {
+    color: var(--text);
+}
+
+.top-nav-list a{
+    color: var(--text);
+}
+
+.main-nav-list a{
+    color: var(--text);
+}
+
+@media (max-width:576px) {
+    .top-header-link {
+        display: none;
+    }
+
+    .top-nav {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+    }
+}
+
+@media (max-width:768px) {
+    .main-nav-item, .main-nav-item a {
+        color: var(--bgColor);
+        margin-top: 3%;
+        border-radius: 5%;
+        background-color: var(--buttonColor);
+    }
+
+    .button {
+        margin-bottom: 3%;
+    }
+}
+
+@media (max-width:992px) {
+    .button {
+        margin-bottom: 5%;
+    }
+
+    .main-nav-item, .main-nav-item :active {
+        color: var(--bgColor);
+        margin-top: 3%;
+        border-radius: 5%;
+        background-color: var(--buttonColor);
+    }
+}
+
+/* end header */
+
+/* start main */
+
+.main {
+    background-color: var(--bgColor);
+}
+
+@media (max-width:576px) {
+    .content {
+        margin-bottom: 3%;
+    }
+
+    .sub-header {
+        text-align: center;
+    }
+}
+
+
+/* end main */
+
+/* start footer */
+
+.main-footer {
+    background-image:
+    linear-gradient(
+    to top right, 
+    #131c29, #213349
+    );
+}
+
+.services a, .opportunities a, .news-header{
+    color: var(--text);
+}
+
+.list-text {
+    color: var(--buttonColor);
+}
+
+.footer-header{
+    color: var(--bgColor);
+}
+
+.news-list-item {
+    display: flex;
+}
+
+.date {
+    margin: 0;
+    font-size: 22px;
+}
+
+.month {
+    margin: 0;
+}
+
+.date1 {
+    color: var(--bgColor);
+    background: #bc813f;
+    text-align: center;
+    border-radius: 5%;
+    height: 25%;
+}
+
+.date2 {
+    color: var(--bgColor);
+    background: #ba6045;
+    text-align: center;
+    border-radius: 5%;
+    height: 25%;
+}
+
+.date3 {
+    color: var(--bgColor);
+    background: #bb435c;
+    text-align: center;
+    border-radius: 5%;
+    height: 25%;
+}
+
+.colophon, .colophon a {
+    color: var(--buttonColor);
+    background-color: var(--prim); 
+}
+
+.colophon-text {
+    margin: 0;
+}
+
+@media (max-width:576px) {
+    .services {
+        margin-left: 15%;
+        margin-bottom: 3%;
+    }
+
+    .opportunities {
+        display: none;
+    }
+
+    .news {
+        margin-left: 15%;
+        margin-bottom: 3%;
+    }
+
+    .colophon {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+    .services {
+        margin-top: 3%;
+    }
+
+    .colophon {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width:992px) {
+    .services {
+        border: 1px solid red;
+        height: 100%;
+    }
+
+    .service-list-item {
+        margin-top: 10.7%;
+    }
+
+    .service-button {
+        margin-top: 70%;
+    }
+
+    .opportunities {
+        border: 1px solid beige;
+        height: 100%;
+    }
+
+    .opp-list-item {
+        margin-top: 40%;
+    }
+
+    .opp-button {
+        margin-top: 51%;
+    }
+
+    .news {
+        border: 1px solid blue;
+    }
+}
+
+/* end footer */
